@@ -1,5 +1,8 @@
 CREATE TABLE IF NOT EXISTS shipment.shipment (
     id INTEGER AUTO_INCREMENT,
-    name varchar(50) NOT NULL,
+    item_id INTEGER NOT NULL,
+    carrier varchar(50) NOT NULL,
+    shipping_time DATETIME NOT NULL,
+    shipping_status varchar(50) NOT NULL,
     PRIMARY KEY (id)
 );
