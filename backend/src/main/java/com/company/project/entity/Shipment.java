@@ -6,13 +6,14 @@ import javax.persistence.Table;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 @Table(name="shipment")
 public class Shipment {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(name = "item_id", nullable = false)
     private int itemId;
@@ -65,6 +66,17 @@ public class Shipment {
     public void setShippingStatus(String shippingStatus) {
         this.shippingStatus = shippingStatus;
     }
+
+    // TODO: maybe move this to another class as a design pattern
+    // public boolean update(Shipment prev, Shipment current){
+    //     try {
+    //         prev.get
+         
+    //         return true;
+    //     } catch (Exception e) {
+    //         return false;
+    //     }        
+    // }
 
     @Override
     public int hashCode() {
