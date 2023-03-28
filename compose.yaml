@@ -1,3 +1,6 @@
+# This file is no longer accurate after the file restructuring that was done
+
+
 services:
   backend:
     build: backend
@@ -39,7 +42,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./frontend/src:/code/src
+      - .ShipmentMicroservice/frontend/src:/code/src
       - /project/node_modules
     networks:
       - react-spring
